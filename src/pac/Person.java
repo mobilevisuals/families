@@ -83,4 +83,11 @@ public class Person implements Serializable{
         this.jobList = nickName;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" + "firstName=" + firstName + ", lastName=" + lastName + ", family=" + family + ", nonsenseField=" + nonsenseField + ", jobList=" + jobList + '}';
+    }
+    
+    
+
 }
