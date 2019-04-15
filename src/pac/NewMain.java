@@ -20,11 +20,10 @@ import javax.persistence.Query;
  */
 public class NewMain {
 
-    private static final String PERSISTENCE_UNIT_NAME = "JPA_familiesPU";
     private EntityManagerFactory factory;
 
     private void startup() {
-        factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        factory = Persistence.createEntityManagerFactory("JPA_familiesPU");
         EntityManager em = factory.createEntityManager();
 // Begin a new local transaction so that we can persist a new entity
         em.getTransaction().begin();
